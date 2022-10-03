@@ -1,0 +1,19 @@
+{
+  "name": "level_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inq.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^6.5.0"
+  }
+
+  
+  
+}
