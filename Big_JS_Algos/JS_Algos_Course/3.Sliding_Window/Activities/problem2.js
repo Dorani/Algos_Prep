@@ -15,3 +15,16 @@
 // Time Complexity - O(n)
 
 // Space Complexity - O(1)
+
+function minSubArrayLen(arr, num) {
+    let start = 0;
+    let end = arr.lentgh - 1;
+
+    if(!num && arr.length < 0) return 0;
+
+    while(start < end) {
+        let sum;
+        sum += start + end;
+        
+    }
+}
