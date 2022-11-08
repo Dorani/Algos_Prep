@@ -16,3 +16,27 @@
 
 // Space Complexity - O(1)
 
+function minSubArrayLen(nums, sum) {
+    let total = 0;
+    let start = 0;
+    let end = 0;
+    let minLen = Infinity;
+
+    while(start < nums.length) {
+        //if current window doesn't add up to the given sum 
+        if(total < sum && end < nums.length) {
+            //move the window to the right
+            total += nums[end];
+            end++
+        }
+        else if(total >= sum) {
+             minLen = Math.min(minLen, end-start);
+             total -= nums[start];
+             start++;
+        } else {
+            break
+        }
+    }
+
+    return minLen === Infinity ? 0: minLen;
+}
