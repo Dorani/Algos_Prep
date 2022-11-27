@@ -1,6 +1,6 @@
 // Frequency Counter / Multiple Pointers - areThereDuplicates
-// Implement a function called, areThereDuplicates which accepts a variable number of arguments, 
-// and checks whether there are any duplicates among the arguments passed in.  
+// Implement a function called, areThereDuplicates which accepts a variable number of arguments,
+// and checks whether there are any duplicates among the arguments passed in.
 // You can solve this using the frequency counter pattern OR the multiple pointers pattern.
 
 // Examples:
@@ -21,8 +21,8 @@ function areThereDuplicates() {
     lookup[arguments[val]] = (lookup[arguments[val]] || 0) + 1;
   }
 
-  for(let key in lookup){
-    if(lookup[key] > 1) return true
+  for (let key in lookup) {
+    if (lookup[key] > 1) return true;
   }
   return false;
 }
@@ -32,6 +32,3 @@ function areThereDuplicates() {
 // Time - O(n log n)
 
 // Space - O(1)
-
-
-  
