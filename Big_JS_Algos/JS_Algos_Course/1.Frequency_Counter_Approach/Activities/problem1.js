@@ -3,7 +3,7 @@
 
 // Your solution MUST have the following complexities:
 
-// Time: O(N)
+// Time: O(1)
 
 // Sample Input:
 
@@ -15,7 +15,7 @@
 function sameFrequency(number1, number2) {
   const num1 = number1.toString();
   const num2 = number2.toString();
-  // good luck. Add any arguments you deem necessary.
+
   if (num1.length !== num2.length) return false;
 
   const lookup = {};

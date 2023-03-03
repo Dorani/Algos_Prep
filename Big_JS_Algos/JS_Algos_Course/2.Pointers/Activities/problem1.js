@@ -21,7 +21,7 @@ function averagePair(arr, avg) {
   let end = arr.length - 1;
 
   while (start < end) {
-    let tempAvg = arr[start] + arr[end] / 2;
+    let tempAvg = (arr[start] + arr[end]) / 2;
     if (tempAvg === avg) {
       return true;
     } else if (tempAvg < avg) {
