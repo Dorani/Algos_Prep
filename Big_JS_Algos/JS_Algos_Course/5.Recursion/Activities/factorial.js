@@ -20,3 +20,5 @@ function factorialRecursive(num) {
     }
     return num * factorialRecursive(num -1)
 }
+
+factorialRecursive(6);
