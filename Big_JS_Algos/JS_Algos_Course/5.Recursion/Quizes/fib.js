@@ -9,13 +9,10 @@
 //[1,1,2,3,5,8,13 ...] fib(13)// should return 144
 
 function fib(number) {
-  if (number === 1) {
-    return 0;
-  } else if (number === 2) {
-    return 1;
-  } else {
-    return fib(number - 1) + fib(number - 2);
-  }
+    if(number <= 1) {
+        return number;
+    } else {
+        return fib(number - 1) + fib(number - 2)
+    }
 }
-
-fib(13);
+fib(13)// should return 233
