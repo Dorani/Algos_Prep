@@ -1,0 +1,21 @@
+// Fib
+
+// Write a recursive function called fib which accepts a number and returns
+// the nth number in the Fibonacci sequence. Recall that the Fibonacci sequence
+// is the sequence of whole numbers 1, 1, 2, 3, 5, 8, ... which starts
+// with 1 and 1, and where every number thereafter is equal to the sum of
+// the previous two numbers.
+
+//[1,1,2,3,5,8,13 ...] fib(13)// should return 144
+
+function fib(number) {
+  if (number === 1) {
+    return 0;
+  } else if (number === 2) {
+    return 1;
+  } else {
+    return fib(number - 1) + fib(number - 2);
+  }
+}
+
+fib(13);
