@@ -22,9 +22,6 @@ var obj2 = {
   e: { e: { e: 2 }, ee: "car" },
 };
 
-console.log(nestedEvenSum(obj1)); // 6
-console.log(nestedEvenSum(obj2)); // 10
-
 //Breakdown:
 // - deconstruct obj into an array of just values
 // - establish sum var and intialize it to 0
@@ -58,3 +55,7 @@ function nestedEvenSum(obj) {
   helper(val);
   return "The sum is of all evenly divisible numbers is: " + sum;
 }
+
+
+console.log(nestedEvenSum(obj1)); // 6
+console.log(nestedEvenSum(obj2)); // 10
