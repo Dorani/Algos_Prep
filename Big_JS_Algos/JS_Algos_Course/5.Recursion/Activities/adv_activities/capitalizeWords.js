@@ -16,10 +16,10 @@
 
 function capitalizeWords(arr) {
   let cappedArr = [];
-
   if (arr.length === 1) return arr[0].toUpperCase();
 
   cappedArr.push(arr[0].toUpperCase());
+  console.log(cappedArr);
   return cappedArr.concat(capitalizeWords(arr.slice(1)));
 }
 
