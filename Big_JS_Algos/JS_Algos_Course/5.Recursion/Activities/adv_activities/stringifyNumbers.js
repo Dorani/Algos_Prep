@@ -33,3 +33,19 @@ stringifyNumbers(obj)
     }
 }
 */
+
+
+//Breakdown:
+//Deconstruct obj into an array of values
+    // - use a helper function that takes in input
+    //check to see if there is an input first, if not
+    //return 0
+    // - check to see if there is an input of type 'number'
+    //if there is, use json.Stringify to convert it into a string
+    //otherwise if the type of input[0] === 'object'
+    //then deconstruct it and grab the values intialized as newInput
+    //use helper on input
+    //then before end of helper function
+    //invoke helper on input, and slice out 1 element at a time
+//invoke helper on initial deconstructured values
+//return object.entries(initial deconstructed array)
