@@ -29,7 +29,7 @@ var obj2 = {
   //   - see if there is an input first and if there isnt
   //     - return 0
   //   - see if there is an input of type 'number' and that input % 2 === 0
-  //    - sum += and that input[i]
+  //    - sum += and that input[0]
   //   - otherwise if type of input[0] is an obj then
   //     - deconstruct it and grab the values initialize it as newInput
   //     - use helper(input)
