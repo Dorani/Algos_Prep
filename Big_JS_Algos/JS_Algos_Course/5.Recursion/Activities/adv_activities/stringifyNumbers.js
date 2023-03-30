@@ -49,3 +49,36 @@ stringifyNumbers(obj)
     // - invoke helper on input, and slice out 1 element at a time until we reach base case
 //invoke helper on initial deconstructured values
 //return object.entries(initial deconstructed array)
+
+
+let obj = {
+    num: 1,
+    test: [],
+    data: {
+        val: 4,
+        info: {
+            isRight: true,
+            random: 66
+        }
+    }
+}
+
+function stringifyNumbers(obj) {
+    let val = Object.values(obj);
+
+    const helper = (input) => {
+        if(input.length === 0) return '0';
+        if(typeof input[0] === 'number') {
+            JSON.stringify(input[0]);
+        } else if(typeof input[0] === 'object') {
+            let newInput = Object.values(input[0]);
+            helper(newInput);
+        }
+        helper(input.slice(1))
+    }
+
+    helper(val);
+    return Object.assign(val)
+}
+
+stringifyNumbers(obj)
