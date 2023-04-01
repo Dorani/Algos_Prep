@@ -45,11 +45,11 @@ let obj = {
   },
 };
 
-//Recursive approach:
+//Conditional Recursive Call Approach:
 
 //stringifyNumbers(obj):
 //Create an empty newObj = {}
-//loop through each key of the obj function parameter
+//Loop through each key of the obj function parameter
 // - if the type of the obj[key] === 'number'
 //  * newObj[key]: obj[key].toString();
 // - else if type of obj[key] === 'object' && !Array.isArray(obj[key])
