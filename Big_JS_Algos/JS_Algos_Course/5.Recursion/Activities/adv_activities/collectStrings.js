@@ -52,10 +52,10 @@ function collectStrings(obj) {
 //-------Breakdown Pure Recursive Approach-------------//
 //Create an empty array to hold the string, arrStr[]
 //Immediately loop through the object
-//Check to see if the obj[key]s value type of is a 'string'
-//If it is, push that obj[key] into the arrStr[]'
-//Check if type of obj[key] is an obj and not an Array
-//return arrStr.concat with the function invoked and pass in the obj[key]
+// - Check to see if the obj[key]s value type of is a 'string'
+// - If it is, push that obj[key] into the arrStr[]'
+// - Check if type of obj[key] is an obj and not an Array
+// - If it is, return arrStr.concat with the function invoked and pass in the obj[key]
 //return arrayStr;
 
 function collectStrings(obj) {
