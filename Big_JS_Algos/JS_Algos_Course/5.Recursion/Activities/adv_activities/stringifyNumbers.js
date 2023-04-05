@@ -9,6 +9,7 @@ let obj = {
     test: [],
     data: {
         val: 4,
+        elements: [1,2,4],
         info: {
             isRight: true,
             random: 66
@@ -52,7 +53,7 @@ let obj = {
 //Loop through each key of the obj function parameter
 // - if the type of the obj[key] === 'number'
 //  * newObj[key]: obj[key].toString();
-// - else if type of obj[key] === 'object' && !Array.isArray(obj[key])
+// - else if type of obj[key] === 'object' && !Array.isArray(obj[key]) => 2 Truthy statements
 //  * newObj[key]: stringifyNumbers(obj[key])
 // - else
 //  * newObj[key] = obj[key]
