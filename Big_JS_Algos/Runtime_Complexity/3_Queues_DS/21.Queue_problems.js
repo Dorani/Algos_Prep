@@ -28,6 +28,16 @@ class Queue {
   }
 }
 
+
+
+//2.Implement a 'weave' function. Weave receives twos queues as arguments
+// and comebines the contents of each into a new, third queue.
+// The 3rd queue should contain the ALTERNATING content of the 2 queues.
+// The function should handle queues of different lengths without inserting
+// undefined into the new one.
+// Do not access the array inside the queue, only use 'add' and 'remove' and 'peek'
+
+
 function weave (sourceOne, sourceTwo) {
   //create a new queue that can store the combined result of source one and source 2
   const q = new Queue();
@@ -61,9 +71,3 @@ function weave (sourceOne, sourceTwo) {
 
 
 
-//2.Implement a 'weave' function. Weave receives twos queues as arguments
-// and comebines the contents of each into a new, third queue.
-// The 3rd queue should contain the ALTERNATING content of the 2 queues.
-// The function should handle queues of different lengths without inserting
-// undefined into the new one.
-// Do not access the array inside the queue, only use 'add' and 'remove' and 'peek'
