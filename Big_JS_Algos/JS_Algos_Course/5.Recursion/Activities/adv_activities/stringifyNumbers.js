@@ -27,7 +27,7 @@ stringifyNumbers(obj)
     data: {
         val: "4",
         info: {
-            isRight: true,
+            isRight: true, 
             random: "66"
         }
     }
