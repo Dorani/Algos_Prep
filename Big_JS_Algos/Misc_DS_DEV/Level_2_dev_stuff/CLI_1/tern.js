@@ -1,5 +1,5 @@
-let a = process.argv[1]
-let b = process.argv[2];
+let a = process.argv[2]
+let b = process.argv[3];
 
 // if (a < b) {
 //     console.log(true);
@@ -8,3 +8,9 @@ let b = process.argv[2];
 // }
 
 console.log(a < b ? true : false);
+
+if(a < b) {
+    return true;
+} else {
+    return false;
+}

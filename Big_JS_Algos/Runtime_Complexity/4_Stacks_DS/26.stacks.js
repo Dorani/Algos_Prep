@@ -7,11 +7,11 @@ class Stack {
     this.data = [];
   }
 
-  push(record) {
+  add(record) {
     this.data.push(record);
   }
 
-  pop() {
+  remove() {
     return this.data.pop();
   }
 
@@ -20,3 +20,12 @@ class Stack {
   }
 
 }
+
+
+const firstStack = new Stack()
+firstStack.add(1)
+firstStack.add(2)
+
+firstStack.add(3)
+console.log(firstStack);
+
