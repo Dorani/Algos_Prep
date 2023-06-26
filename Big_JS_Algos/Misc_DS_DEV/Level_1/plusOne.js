@@ -8,6 +8,11 @@ var plusOne = function (digits) {
 
 console.log(plusOne([1, 2, 3]));
 
+console.log(plusOne([9]));
+console.log(plusOne([0]));
+console.log(plusOne([99]));
+console.log(plusOne([999]));
+
 
 
 //Schoolback addition => Optimized approach
@@ -37,4 +42,7 @@ const plusOne = (digits) => {
   }
   return digits;
 };
+
+
+
 
