@@ -10,6 +10,23 @@
 // For example:
 // if (x) == ['a', 3] you should return [['a', 3], ['a', 3], ['a', 3]].
 
+
+const explode = (x) => {
+    let score = 0;
+
+    const firstEl = x[0];
+    const secondEl = x[1];
+
+    if(typeof firstEl === 'number' && typeof secondEl === 'number') {
+        score = firstEl + secondEl;
+        return Array.from({length: score}).fill(x);
+    } else if(typeof firstEl === 'number' || typeof secondEl === 'number') {
+        score = typeof firstEl === 'number' ? firstEl : typeof secondEl === 'number' ? secondEl : 0;
+        return Array.from({length: score}).fill(x);
+    } else if(typeof firstEl != 'number' && typeof secondEl != 'number') {
+            return 'Void!'
+        }
+}
 //1.create a function that holds a parameter x,that is an array of two values
     //pass in x as a parameter
     //x represents an array of 2 values
@@ -22,4 +39,9 @@
     //create a score let called sum and make it 0
     //take sum = arr[0] + arr[1]  
 
-    //otherwise if one element is != typeOf 'number'
+    //if else if one element is != typeOf 'number'
+    //return the element which is a number as the score
+
+    //else if both of not a number
+    //return void
+
