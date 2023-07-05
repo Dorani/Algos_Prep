@@ -27,21 +27,7 @@ const explode = (x) => {
             return 'Void!'
         }
 }
-//1.create a function that holds a parameter x,that is an array of two values
-    //pass in x as a parameter
-    //x represents an array of 2 values
-    //we will need validate these values to understand them
-    //and calculate a score
 
-
-//Inside the function:
-    //create a if statement if both elements in the array are numbers
-    //create a score let called sum and make it 0
-    //take sum = arr[0] + arr[1]  
-
-    //if else if one element is != typeOf 'number'
-    //return the element which is a number as the score
-
-    //else if both of not a number
-    //return void
-
+explode([2,3])
+explode(['a',3])
+explode([2,3])
