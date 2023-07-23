@@ -20,33 +20,6 @@
 // Space Complexity - O(1)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function maxSubarraySum(arr, num) {
   let total = 0;
   if (arr.length < num) return null;
