@@ -19,15 +19,10 @@
 // Output: [0,1]
 
 //Loop through arr nums
-// First processed is 9 - 2. Since difference is 7, check if there is an element 
+// First processed is 9 - 2. Since difference is 7, check if there is an element
 // with key 7 in the map. In this case, not yet. But store 2, 0 pair.
-// The next pair that will be processed: 9 - 7. Check for existence of 2 in the map. 
+// The next pair that will be processed: 9 - 7. Check for existence of 2 in the map.
 // In this case it exists so pull out the assigned index to it and create a resulting array.
-
-
-
-
-
 
 const twoSum = (nums, target) => {
   const lookup = {};
@@ -45,5 +40,15 @@ const twoSum = (nums, target) => {
 };
 
 const nums = [3, 2, 4],
-  target = 6;
+      target = 6;
 console.log(twoSum(nums));
+
+
+//Breakdown
+//6-3 =3
+//lookup[num] = i; => 3:0
+//6-2 =4
+//lookup[num] = i; => 2:0
+//6-4 = 2
+//lookup[num] = i; is there a 2 in the hashtable, yes, so return [i, lookup[target - num]] 
+    //[1,2]
