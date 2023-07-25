@@ -44,7 +44,7 @@ const nums = [3, 2, 4],
 console.log(twoSum(nums));
 
 
-//Breakdown
+//Breakdown:
 //6-3 =3
 //lookup[num] = i; => 3:0
 //6-2 =4
