@@ -22,14 +22,14 @@
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
 
-//check to see if that there are elements, otherwise return 0;
+//-------------------Breakdown:------------------------//
 
 //set two pointers left and right, near each other ie 0,1
 //set your window max that will increase as the pointers move
 //while 1 < the entire arr, since it essentially starts at 1
 //create the profit from the values of the right pointer - left
 //if the profit is greater than the max
-    //make the current max = profit
+//make the current max = profit
 
 //if the profit < 0, ie negative number
 //make left = right, so we can slide over and keep going till we get to the end
@@ -38,10 +38,7 @@
 
 //return the max
 
-
 const maxProfit = (prices) => {
-  if (!prices) return 0;
-
   let left = 0;
   let right = 1;
   let max = 0;
@@ -64,3 +61,24 @@ const maxProfit = (prices) => {
 const prices = [7, 1, 5, 3, 6, 4];
 
 console.log(maxProfit(prices));
+
+
+//-------------------Refactor:------------------------//
+
+const maxProfitV2 = (prices) => {
+  let left = 0;
+  let right = 1;
+  let maxProfit = 0;
+
+  while (right < prices.length) {
+    if (prices[left] < prices[right]) {
+      let profit = prices[right] - prices[left];
+      maxProfit = Math.max(maxProfit, profit);
+    } else {
+      left = right;
+    }
+    right++;
+  }
+
+  return maxProfit;
+};
