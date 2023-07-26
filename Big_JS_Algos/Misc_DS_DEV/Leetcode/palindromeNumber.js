@@ -33,3 +33,23 @@ const isPalindrome = (x) => {
 
 let x = 121;
 console.log(isPalindrome(x));
+
+
+
+//-----------------------Refactor------------------//
+
+const isPalindromeV1 = (x) => {
+    if(x < 0) return false;
+
+    let reversed = 0;
+
+    for(let i = x; i >=1; i = Math.floor(i/10)) {
+        reversed = (reversed * 10) + (i % 10);
+        console.log(reversed)
+    }
+    return x === reversed;
+}
+
+let x1 = 121;
+console.log(isPalindromeV1(x1));
+
