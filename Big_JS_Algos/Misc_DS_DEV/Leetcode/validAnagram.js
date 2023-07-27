@@ -60,6 +60,7 @@ const isAnagramV1 = (s, t) => {
     const lookup = {};
 
     for(let i = 0; i < s.length; i++) {
+        //logical operators
         lookup[s[i]] = (lookup[s[i]] || 0) + 1;
         lookup[t[i]] = (lookup[t[i]] || 0) - 1;
     }
