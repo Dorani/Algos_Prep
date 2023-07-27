@@ -50,6 +50,28 @@ const isAnagram = (s, t) => {
   return true;
 };
 
+
+
+//--------------------------------Refactored----------------------------------//
+
+const isAnagramV1 = (s, t) => {
+    if(s.length != t.length) return false;
+
+    const lookup = {};
+
+    for(let i = 0; i < s.length; i++) {
+        lookup[s[i]] = (lookup[s[i]] || 0) + 1;
+        lookup[t[i]] = (lookup[t[i]] || 0) - 1;
+    }
+
+    for(const count of Object.values(lookup)) {
+        if(count !== 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
 let s = "anagram",
   t = "nagaram";
 
