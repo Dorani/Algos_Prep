@@ -3,8 +3,6 @@
 //     console.log(data.length, data)
 // };
 
- const arr = [2,2,2,3,3]
- const target = 2;
 
 // removeElement(arr, target);
 
@@ -25,8 +23,9 @@ var removeElement = function(nums, val) {
             left++;
         }
     }
-    
+    console.log(left)
     return left;
 };
-
+const arr = [2,2,2,3,3]
+const target = 2;
 console.log(removeElement(arr,target))

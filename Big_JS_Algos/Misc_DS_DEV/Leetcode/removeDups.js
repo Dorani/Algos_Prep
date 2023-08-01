@@ -3,16 +3,14 @@ function removeDuplicates(nums) {
   return nums;
 }
 
-let arr = [1, 1, 2];
 
-console.log(removeDuplicates(arr));
 
 //No JS built in data structure:
 // Approach 1: Two Pointers
 // Algorithm
 
 // Since the array is already sorted, we can keep two pointers ii and jj, where ii is the slow-runner while jj is the fast-runner. 
-// As long as nums[i] = nums[j]nums[i]=nums[j], we increment jj to skip the duplicate.
+// As long as nums[i] = nums[j] nums[i]=nums[j], we increment jj to skip the duplicate.
 
 // When we encounter nums[j] \neq nums[i]nums[j] = nums[i],
 //the duplicate run has ended so we must copy its value to nums[i + 1]nums[i+1].
@@ -28,5 +26,10 @@ var removeDuplicates = function (nums) {
       nums[i] = nums[j];
     }
   }
-  return i + 1;
+  
+  return nums, i + 1;
 };
+let arr = [0,0,1,1,1,2,2,3,3,4]
+
+console.log(removeDuplicates(arr));
+  
