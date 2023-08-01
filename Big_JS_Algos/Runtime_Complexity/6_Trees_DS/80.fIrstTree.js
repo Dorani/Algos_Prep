@@ -140,7 +140,7 @@ class Tree {
 
 // TO traverse through a tree using depth first, will be super close to breadth first
 
-Start:
+//Start:
 //1 way: we create an empty array
 //     we take the root node of our tree and push it into the empty array
 //     then, while there are some elements in our array, take out the very 1st element
