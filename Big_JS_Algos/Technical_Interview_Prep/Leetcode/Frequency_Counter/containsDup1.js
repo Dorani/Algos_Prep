@@ -7,7 +7,6 @@
 // Input: nums = [1,1,1,3,3,4,3,2,4,2]
 // Output: true
 
-
 //fist check to see if the array has any elements
 //create a lookup object that will hold each indivisual element from nums as a key
 //and its respective value should be = 1, unless that key already exists, then its +1
@@ -16,22 +15,21 @@
 //if it is return true
 //otherwise false
 
-const containsDuplicate = nums => {
-   if(!nums.length) return false;
-   
-   const lookup = {};
+const containsDuplicate = (nums) => {
+  if (!nums.length) return false;
 
-   for(let i = 0; i < nums.length; i++){
-    lookup[nums[i]] ? lookup[nums[i]] += 1 : lookup[nums[i]] = 1;
-   }
+  const lookup = {};
 
-   for(let key in lookup) {
-    if(lookup[key] > 1) return true;
-   }
+  for (let i = 0; i < nums.length; i++) {
+    lookup[nums[i]] ? (lookup[nums[i]] += 1) : (lookup[nums[i]] = 1);
+  }
 
-   return false;
+  for (let key in lookup) {
+    if (lookup[key] > 1) return true;
+  }
+
+  return false;
 };
 
-
-const nums = [1,1,1,3,3,4,3,2,4,2]
+const nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 console.log(containsDuplicate(nums));
