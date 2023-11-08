@@ -17,6 +17,14 @@
 // If we've iterated through the entire pattern and splitArr without violations,
 // return true, indicating that a bijection exists.
 
+
+//Complexities of nested ifs:
+// The outer if condition checks if the pattern character char is already in the patternToWord mapping.
+// If it is, the code checks if the word associated with char matches the current word. If not, it returns false because the bijection is violated.
+// If the pattern character char is not in the patternToWord mapping (the else block), the code checks if the current word has been seen before.
+// If the word has been seen before, it returns false because it implies that this word is associated with a different pattern character, violating the bijection.
+// If neither of the above conditions is met, it establishes a new mapping between char and word in patternToWord and adds the word to the seenWords set.
+
 const wordPattern = (pattern, s) => {
   const splitArr = s.split(" ");
 
@@ -56,3 +64,9 @@ const wordPattern = (pattern, s) => {
 
   return true;
 };
+
+
+let pattern = "abba";
+let s = "dog constructor constructor dog";
+
+console.log(wordPattern(pattern, s)); // Output: true
