@@ -52,6 +52,10 @@ const majorityElementBoyer = (nums) => {
       cnt = 1;
     } else if (sol == nums[i]) {
       cnt++;
+
+      if (cnt > nums.length / 2) {
+        return sol; // Found the majority element
+      }
     } else {
       cnt--;
     }
