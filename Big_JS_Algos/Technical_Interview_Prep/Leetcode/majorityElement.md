@@ -2,9 +2,9 @@
 
 ### Companies: Apple, Adobe, Amazon
 
-    - Given a pattern and a string s, find if s follows the same pattern.
+    - Given an array nums of size n, return the majority element.
 
-    - Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
+    - The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
 
 
     Example 1:
