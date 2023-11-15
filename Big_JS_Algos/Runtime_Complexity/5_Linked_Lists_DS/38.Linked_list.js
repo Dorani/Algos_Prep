@@ -22,11 +22,11 @@ class Node {
 //it only knows about the 1st node
 
 //we will put together all the handy methods
-  //to access the first node
-  //and crawl through the chain and work with the other elements inside
+//to access the first node
+//and crawl through the chain and work with the other elements inside
 
 class LinkedList {
-  constructor(){
+  constructor() {
     this.head = null;
   }
   //INSERT_FIRST METHOD takes some amount of data for it's first arg
@@ -41,7 +41,7 @@ class LinkedList {
   // anddd update the head reference
 
   insertFirst(data) {
-    const node = new Node(data, this.head);//sets up the relationship of a linked list chain
+    const node = new Node(data, this.head); //sets up the relationship of a linked list chain
     //we then need to repair the head reference, looking at the new node
     this.head = node;
 
@@ -95,14 +95,14 @@ class LinkedList {
     // if there is not head element then return null
     // otherwise we want to continue inside the method and do some work
     if (!this.head) {
-      return null
+      return null;
     }
     // to iterate through the linked list and get to the last node
     // we will use the size method, get a reference to the current node
     // and then iterate through the node, and as long as there is one
     // we will continue through the while loop
     let node = this.head;
-    while(node) {
+    while (node) {
       if (!node.next) {
         // as soon as we find the very last node (next = null) and we should return it
         return node;
@@ -137,7 +137,6 @@ class LinkedList {
     //update this.head to look at the second node
     this.head = this.head.next;
   }
-
 
   //REMOVE_LAST Method
   //removes the last node of the chain
@@ -200,8 +199,6 @@ class LinkedList {
 
   //so first lets handle the case to see if our list is empty
 
-
-
   insertLast(data) {
     //getting a reference to the last node in a our current linked list
     const last = this.getLast();
@@ -210,15 +207,14 @@ class LinkedList {
       //there are some existing nodes in our chain
       //create our new node and pass in data to it
       //set the previos node on the chain
-      last.next = new Node(data)
+      last.next = new Node(data);
     } else {
       //the chain is empty
       //we have no new last node
       // we want to create the node and set it to the linked list head property
       //the very first node of our chain
-      this.head = new Node(data)
+      this.head = new Node(data);
     }
-
   }
 
   //GET AT METHOD:
@@ -241,19 +237,17 @@ class LinkedList {
   //check to see if counter is === index, not so advance the counter and node
   // once they are equal return that node!
 
-
   //2 edge cases:
-    //we have no nodes at all, and we have an empty linked list,
-    //so we need a simple check to see if we have at least 1 node
-      //we can interate through
-      //otherwise we should return null or we cant find that element
+  //we have no nodes at all, and we have an empty linked list,
+  //so we need a simple check to see if we have at least 1 node
+  //we can interate through
+  //otherwise we should return null or we cant find that element
 
-    //what if someone calls getAt() with an index that outside the realm of the entire lenggth of the list?
-      //we can call the size method, before any interation to see if the size is greater than our index
-      //ok they are asking for a valid index
-      //then we can interate
-      //2 interations? not efficient...
-
+  //what if someone calls getAt() with an index that outside the realm of the entire lenggth of the list?
+  //we can call the size method, before any interation to see if the size is greater than our index
+  //ok they are asking for a valid index
+  //then we can interate
+  //2 interations? not efficient...
 
   getAt(index) {
     // check to see if there is a head node
@@ -268,7 +262,7 @@ class LinkedList {
     let node = this.head;
 
     //as long as a node is present
-    while(node) {
+    while (node) {
       //then we can check if counter is === to index we are trying to retrieve
       //that means we found the node at the given index
       if (counter === index) {
@@ -282,7 +276,6 @@ class LinkedList {
     return null;
   }
 
-
   //REMOVE_AT METHOD:
 
   //We are going to call remove at at a particular index.
@@ -291,148 +284,129 @@ class LinkedList {
   //so for example we want to remove the node at index 1 given this chain
   //the first element at a linked list will have an index of 0
   //so we if want to move an element at index 1
-    //we have to find the previous node in the chain and update its next reference
-    //to skip over that one and goes to the preceding node.
-    //now our linked list skips blue
-    //which means it exists in memory but it is no longer part of the chain!
-
+  //we have to find the previous node in the chain and update its next reference
+  //to skip over that one and goes to the preceding node.
+  //now our linked list skips blue
+  //which means it exists in memory but it is no longer part of the chain!
 
   //Edge cases:
-    //make sure our linked list doesnt crash if we call remove at with no elements
-    //or remove element at index 1 but there is only 1 element
-    //or if we want to remove element at index 10 but only 2 elements exisits in the chain?
-
+  //make sure our linked list doesnt crash if we call remove at with no elements
+  //or remove element at index 1 but there is only 1 element
+  //or if we want to remove element at index 10 but only 2 elements exisits in the chain?
 
   // We can use get at, which retrieves an element at a particular index.
-    // for example if we want to remove an element at index 1
-    // we would call getAt(0) at index 0
-    // then we can update the next property on it, to reference the red element
+  // for example if we want to remove an element at index 1
+  // we would call getAt(0) at index 0
+  // then we can update the next property on it, to reference the red element
 
-    //Now let's address edge cases:
-      // 1. make sure our linked list doesnt crash if we call remove at with no elements
+  //Now let's address edge cases:
+  // 1. make sure our linked list doesnt crash if we call remove at with no elements
 
-      // 2. Case where we try to delete the 1st node, reuse getAt() with the above strategy
+  // 2. Case where we try to delete the 1st node, reuse getAt() with the above strategy
 
+  removeAt(index) {
+    // if there is no head element then return right away
+    if (!this.head) {
+      return;
+    }
 
-      removeAt(index) {
-        // if there is no head element then return right away
-        if (!this.head) {
-          return;
-        }
+    //the case in which we are trying to remove the very first element
+    if (index === 0) {
+      //point at the second element in the chain, even if it has one element in the chain
+      this.head = this.head.next;
+      return;
+    }
 
-        //the case in which we are trying to remove the very first element
-        if (index === 0) {
-          //point at the second element in the chain, even if it has one element in the chain
-          this.head = this.head.next;
-          return;
-        }
+    //reuise our getAt() method to attempt to find the previous node
+    const previous = this.getAt(index - 1);
+    //If we found the previous node we need to make sure we update the next property to
+    //to look into the future, ie previous.next looks at the current next.next
 
-        //reuise our getAt() method to attempt to find the previous node
-        const previous = this.getAt(index - 1);
-        //If we found the previous node we need to make sure we update the next property to
-        //to look into the future, ie previous.next looks at the current next.next
+    if (!previous || !previous.next) {
+      return;
+    }
+    previous.next = previous.next.next;
+    //3rd case: removeat on an index greater than the total number of nodes
+    //ie removeat(12) when we only have 3 nodes
+    //remember that the getAt method is wired up to return null when we try to find an element that is not in the list
+    //so check line 334 for this functionality
+    //if previous was not found or if previous does not have a next node
+    //return
+  }
 
-        if (!previous || !previous.next) {
-          return;
-        }
-        previous.next = previous.next.next;
-        //3rd case: removeat on an index greater than the total number of nodes
-        //ie removeat(12) when we only have 3 nodes
-        //remember that the getAt method is wired up to return null when we try to find an element that is not in the list
-        //so check line 334 for this functionality
-        //if previous was not found or if previous does not have a next node
-        //return
-      }
+  //Insert at method
+  // called with some amount of data and an integer index where this node should be inserted
+  //if the index is out of bounds then we want to add the node to the end of the list
+  // we are going to be providing the data field
+  //we are not overriding anything
+  //we are simply insert a new node located at an index
 
+  //2 edge cases
+  //insert a node in a empty list
+  //the provided index is out of bounds
 
-      //Insert at method
-      // called with some amount of data and an integer index where this node should be inserted
-      //if the index is out of bounds then we want to add the node to the end of the list
-      // we are going to be providing the data field
-      //we are not overriding anything
-      //we are simply insert a new node located at an index
+  //getAt method to get a reference to the previous node in the chain
+  //then we create the new node, and make sure the previous node points to the new one
+  //and that the new one points to the old one.
 
+  insertAt(data, index) {
+    //if our list has no element, then we create a new element and point our head prop to that element
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+    //case if want to insert it at the begining
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+    //last big case:
+    // we are going to want to find the previous element, the one we want to find before we insert the node ahead of it
+    const previous = this.getAt(index - 1 || this.getLast());
+    //we will then create our new node and pass in the current node after previous
+    //and we will pass in red as the second argument to it.
+    //since blue is still looking at red we need to fix that
 
-      //2 edge cases
-      //insert a node in a empty list
-      //the provided index is out of bounds
+    //but first we need to point the new orange node to red
+    const node = new Node(data, previous.next);
 
+    //now we need to make previous look at the orange node
+    previous.next = node;
 
-      //getAt method to get a reference to the previous node in the chain
-      //then we create the new node, and make sure the previous node points to the new one
-      //and that the new one points to the old one.
-
-
-      insertAt(data, index) {
-        //if our list has no element, then we create a new element and point our head prop to that element
-        if (!this.head) {
-          this.head = new Node(data);
-          return;
-        }
-        //case if want to insert it at the begining
-        if (index === 0 ) {
-          this.head = new Node(data, this.head);
-          return;
-        }
-        //last big case:
-        // we are going to want to find the previous element, the one we want to find before we insert the node ahead of it
-        const previous = this.getAt(index - 1 || this.getLast());
-        //we will then create our new node and pass in the current node after previous
-        //and we will pass in red as the second argument to it.
-        //since blue is still looking at red we need to fix that
-
-        //but first we need to point the new orange node to red
-        const node = new Node(data, previous.next);
-
-        //now we need to make previous look at the orange node
-        previous.next = node;
-
-
-        //if we have a get index of 12, when we call get at we will get null returned
-        //last case: when index is out of bounds node has to be added to end of the list
-        // if this returns a falsey value we will create an OR case and we will instead run code on line 370 which
-        // essentially says go and get the last node in our chain, then it gets assigned to previous
-        // we will then create our new node, and the new node next prop will be previous. next
-        // then previous.next is now point over to orange
-
-      }
-
+    //if we have a get index of 12, when we call get at we will get null returned
+    //last case: when index is out of bounds node has to be added to end of the list
+    // if this returns a falsey value we will create an OR case and we will instead run code on line 370 which
+    // essentially says go and get the last node in our chain, then it gets assigned to previous
+    // we will then create our new node, and the new node next prop will be previous. next
+    // then previous.next is now point over to orange
+  }
 }
--------------------------------------------------------------------------------
-//FOR EACH FUNCTION
-//We can pass in our own interator function
-//Iterates through every node of the chain and the index of the node
-//the node and index should be passed as an arg of our function
+// -------------------------------------------------------------------------------
+// //FOR EACH FUNCTION
+// //We can pass in our own interator function
+// //Iterates through every node of the chain and the index of the node
+// //the node and index should be passed as an arg of our function
 
-list.forEach((node , index){
+list.forEach((node, index) => {
   node.data += 10;
 });
-
-
 
 // Ok lets make a linked list, and maybe you should write a method that retrieves the first element
 // question to ask: hey are we going to be doing any retrieval of any other elements? because of we are, maybe I shouldnt write
 // an insertFirst() method, maybe I should just write an insertAt(data, 0) method.
 
+// ie: insertFirst(data){
+//   return this.insetAt(data,0)
+// };
+// //reusability, effeciency, and pure awesomeness
+// //this passes all tests
 
-ie: insertFirst(data){
-  return this.insetAt(data,0)
-};
-//reusability, effeciency, and pure awesomeness
-//this passes all tests
+// getLast() {
+//   return this.getAt(this.size() - 1)
+// }
 
-getLast(){
-  return this.getAt(this.size() - 1)
-}
-
-list.forEach((node , index){
-  node.data += 10;
-});
-
-
-
-
-
-
+// list.forEach((node , index){
+//   node.data += 10;
+// });
 
 //Interview Question about linked lists: See section 55
