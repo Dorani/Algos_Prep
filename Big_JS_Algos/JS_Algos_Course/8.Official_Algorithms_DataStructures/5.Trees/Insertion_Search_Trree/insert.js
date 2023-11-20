@@ -12,36 +12,61 @@ class BinarySearchTree {
   }
 
   insert(value) {
-    const newNode = new Node(value);
+    var newNode = new Node(value);
     if (this.root === null) {
       this.root = newNode;
       return this;
-    } else {
-      let current = this.root;
-      while (true) {
-        if (value === current.value) return undefined;
-        //if val is less than root val
-        //and there is no left property,
-        //update current.left with the new node
-        if (value < current.value) {
-          if (current.left === null) {
-            current.left = newNode;
-            return this;
-          } else {
-            current = current.left;
-          }
-          //if val is less than root val
-          //and there is no left property,
-          //update current.left with the new node
-        } else if (value > current.value) {
+    }
+    var current = this.root;
+    while (true) {
+      if (value === current.value) return undefined;
+      if (value < current.value) {
+        if (current.left === null) {
+          current.left = newNode;
+          return this;
+        }
+        current = current.left;
+      } else {
+        if (current.right === null) {
           current.right = newNode;
           return this;
-        } else {
-          current = current.right;
         }
+        current = current.right;
       }
     }
   }
+
+  // insert(value) {
+  //   const newNode = new Node(value);
+  //   if (this.root === null) {
+  //     this.root = newNode;
+  //     return this;
+  //   } else {
+  //     let current = this.root;
+  //     while (true) {
+  //       if (value === current.value) return undefined;
+  //       //if val is less than root val
+  //       //and there is no left property,
+  //       //update current.left with the new node
+  //       if (value < current.value) {
+  //         if (current.left === null) {
+  //           current.left = newNode;
+  //           return this;
+  //         } else {
+  //           current = current.left;
+  //         }
+  //         //if val is less than root val
+  //         //and there is no left property,
+  //         //update current.left with the new node
+  //       } else if (value > current.value) {
+  //         current.right = newNode;
+  //         return this;
+  //       } else {
+  //         current = current.right;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 const tree = new BinarySearchTree();
