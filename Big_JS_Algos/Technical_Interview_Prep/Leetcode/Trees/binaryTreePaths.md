@@ -20,26 +20,3 @@ Constraints:
 
 The number of nodes in the tree is in the range [1, 100].
 -100 <= Node.val <= 100
-
-## Breakdown:
-
-- Approach 1: Preorder Traversal: Always Choose Left Middle Node as a Root
-  Algorithm: [-10, -3, 0, 5, 9]
-
-            00
-            /\
-        -10     5
-            \    \
-            -3   9
-
-- Implement helper function helper(left, right), which constructs BST from nums elements between indexes left and right:
-
-- If left > right, then there is no elements available for that subtree. Return None.
-
-- Pick left middle element: p = (left + right) // 2.
-
-- Initiate the root: root = TreeNode(nums[p]).
-
-- Compute recursively left and right subtrees: root.left = helper(left, p - 1), root.right = helper(p + 1, right).
-
-- Return helper(0, len(nums) - 1).
