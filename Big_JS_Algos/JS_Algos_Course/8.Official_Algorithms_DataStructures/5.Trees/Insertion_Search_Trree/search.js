@@ -88,4 +88,4 @@ tree.insert(7);
 
 tree;
 
-tree.find(10);
+tree.find(2);

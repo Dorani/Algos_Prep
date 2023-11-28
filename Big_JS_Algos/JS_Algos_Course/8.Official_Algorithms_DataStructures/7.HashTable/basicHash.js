@@ -7,3 +7,5 @@ function hash(key, arrayLen) {
   }
   return total;
 }
+
+hash("pink", 10);

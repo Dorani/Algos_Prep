@@ -111,3 +111,4 @@ g.addEdge("E", "F");
 //        \   /
 //          F
 g.breadthFirst("A");
+//[ 'A', 'B', 'C', 'D', 'E', 'F' ]

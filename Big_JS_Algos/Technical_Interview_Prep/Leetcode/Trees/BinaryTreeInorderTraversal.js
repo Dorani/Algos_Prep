@@ -1,4 +1,4 @@
-const inOrderTraversal = (root) => {
+const inorderTraversal = (root) => {
   const data = [];
 
   function inOrder(node) {

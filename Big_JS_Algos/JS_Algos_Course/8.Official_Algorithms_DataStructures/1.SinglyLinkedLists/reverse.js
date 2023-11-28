@@ -162,3 +162,28 @@ list.print();
 
 list.reverse();
 list.print();
+
+//Reverse:
+// Initialize a variable node and set it to the current head of the linked list. This variable will be used to traverse the list.
+
+// Update the head of the linked list to be the current tail. This effectively makes the tail the new head.
+
+// Update the tail of the linked list to be the original head. This effectively makes the head the new tail.
+
+// Initialize two more variables, prev and next. prev will be used to keep track of the previous node in the reversed list, and next will be used to temporarily store the next node in the original list as we reverse the pointers.
+
+// Enter a loop that iterates through the list from the current node (which is now the original tail) to the end of the list (using this.length as the loop condition).
+
+// Inside the loop, store the next node of the current node in the next variable. This is done to prevent losing the reference to the rest of the list.
+
+// Update the next pointer of the current node to point to the prev node. This effectively reverses the direction of the pointer.
+
+// Move the prev variable to the current node (effectively moving it forward in the list).
+
+// Move the node variable to the next node (moving forward in the original list).
+
+// Repeat steps 6-9 until the loop has iterated through the entire list, effectively reversing the pointers for all nodes in the list.
+
+// Finally, return the modified linked list, which is now reversed.
+
+// In summary, your reverse method traverses the linked list while reversing the direction of the pointers, resulting in the linked list being reversed in place. The time complexity of this algorithm is O(n), where n is the number of nodes in the linked list, as it iterates through the list once
