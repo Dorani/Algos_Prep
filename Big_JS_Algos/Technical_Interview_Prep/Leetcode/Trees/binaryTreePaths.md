@@ -2,9 +2,9 @@
 
 ### Companies: Bloomberg, Amazon, Apple
 
-    - Given the root of a binary tree, return all root-to-leaf paths in any order.
+- Given the root of a binary tree, return all root-to-leaf paths in any order.
 
-    - A leaf is a node with no children.
+- A leaf is a node with no children.
 
 Example 1:
 ![Alt text](https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg)

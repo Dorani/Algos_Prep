@@ -2,9 +2,9 @@
 
 ### Companies: Facebook, Amazon, Coupang
 
-    - Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target. If there are multiple answers, print the smallest.
+- Given the root of a binary search tree and a target value, return the value in the BST that is closest to the target. If there are multiple answers, print the smallest.
 
-    - A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+- A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
 
 ## Approach:
 
