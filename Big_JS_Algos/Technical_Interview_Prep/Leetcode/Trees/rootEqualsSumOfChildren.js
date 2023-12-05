@@ -10,4 +10,8 @@
  * @param {TreeNode} root
  * @return {boolean}
  */
-const checkTree = (root) => {};
+const checkTree = (root) => {
+  if (!root) return false;
+  if (root.left.val + root.right.val != root.val) return false;
+  return true;
+};
