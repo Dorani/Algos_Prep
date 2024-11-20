@@ -3,6 +3,27 @@
  * @return {number}
  */
 
+const singleNumber1 = (nums) => {
+  if (!nums.length) return false;
+  const singleLookup = {};
+  for (let i = 0; i < nums.length; i++) {
+    if (singleLookup[nums[i]]) {
+      singleLookup[nums[i]] += 1;
+    } else {
+      singleLookup[nums[i]] = 1;
+    }
+  }
+  console.log(singleLookup);
+
+  for (let key in singleLookup) {
+    if (singleLookup[key] === 1) return key;
+  }
+  return false;
+};
+
+example1 = [2, 2, 1];
+console.log(singleNumber1(example1));
+
 // Example 1:
 
 // Input: nums = [2,2,1]
@@ -16,34 +37,30 @@
 // The number that appears once will remain because of the property a^=0=a.
 // So, after XORing all numbers in the array, the only value left in result will be the number that appears once.
 
-
 // Properties of XOR:
 
 // a⊕a=0: Any number XORed with itself will result in 0.
 
 // a⊕0=a: Any number XORed with 0 will be the number itself.
 
-// a⊕b⊕a=b: The order in which XOR operations are applied does not matter, 
+// a⊕b⊕a=b: The order in which XOR operations are applied does not matter,
 // and any number XORed with itself cancels out, leaving the other number.
 
-// XOR the first number: 
+// XOR the first number:
 // result=0⊕2=2
-// XOR the second number: 
+// XOR the second number:
 // result=2⊕2=0 (since 2 XOR 2 is 0)
-// XOR the third number: 
+// XOR the third number:
 // result=0⊕1=1
 
+// const singleNumber = (nums) => {
+//   let result = 0;
+//   for (let num of nums) {
+//     result ^= num;
+//   }
+//   return result;
+// };
 
+// const nums = [4, 1, 2, 1, 2];
 
-const singleNumber = (nums) => {
-    let result = 0;
-    for(let num of nums) {
-        result ^= num;
-    }
-    return result;
-};
-
-
-const nums = [4,1,2,1,2]
-
-console.log(singleNumber(nums))
+// console.log(singleNumber(nums));

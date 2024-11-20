@@ -33,3 +33,27 @@ const containsDuplicate = (nums) => {
 
 const nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
 console.log(containsDuplicate(nums));
+
+//Simpler to read for beginners:
+const containsDuplicate1 = (nums) => {
+  if (!nums.length) return false;
+
+  const lookup = {};
+
+  for (let i = 0; i < nums.length; i++) {
+    if (lookup[nums[i]]) {
+      lookup[nums[i]] += 1;
+    } else {
+      lookup[nums[i]] = 1;
+    }
+  }
+
+  for (let key in lookup) {
+    if (lookup[key] > 1) return true;
+  }
+
+  return false;
+};
+
+const nums1 = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+console.log(containsDuplicate1(nums));
