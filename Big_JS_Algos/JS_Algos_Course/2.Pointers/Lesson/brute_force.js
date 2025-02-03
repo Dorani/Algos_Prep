@@ -1,5 +1,5 @@
 //Write a function called sumZero which accepts a sorted array of integers. The function should find the first
-// pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if pair does Notification
+// pair where the sum is 0. Return an array that includes both values that sum to zero or undefined if pair does nothing
 
 // function sumZero(arr){
 //     for(let i = 0; i < arr.length; i++){
