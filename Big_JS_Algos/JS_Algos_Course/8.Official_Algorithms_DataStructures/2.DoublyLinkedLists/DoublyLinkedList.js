@@ -37,3 +37,5 @@ const third = new Node(12);
 list.push(first);
 list.push(second);
 list.push(third);
+debugger;
+console.log(list); // DoublyLinkedList { head: Node { val: 10, next: Node { val: 11, next: [Node], prev: [Circular] }, prev: null }, tail: Node { val: 12, next: null, prev: [Node] }, length: 3 }

@@ -27,6 +27,10 @@ class SinglyLinkedList {
 }
 
 const list = new SinglyLinkedList();
+
+// Example 1
 list.push("Hello");
 list.push("You");
 list.push("We made 3 nodes in a linked list!");
+debugger;
+console.log(list); // SinglyLinkedList { length: 3, head: Node { value: 'Hello', next: Node { value: 'You', next: [Node] } }, tail: Node { value: 'We made 3 nodes in a linked list!', next: null } }

@@ -127,3 +127,12 @@ tree.insert(20);
 tree.BFS();
 tree.DFSPreOrder();
 tree.DFSPostOrder();
+debugger;
+console.log(tree.DFSPostOrder()); // [ 3, 8, 6, 20, 15, 10 ]
+console.log(tree.DFSPreOrder()); // [ 10, 6, 3, 8, 15, 20 ]
+console.log(tree.BFS()); // [ 10, 6, 15, 3, 8, 20 ]
+console.log(tree.contains(15)); // true
+console.log(tree.contains(99)); // false
+console.log(tree.find(15)); // true
+console.log(tree.find(99)); // false
+console.log(tree); // BinarySearchTree { root: Node { value: 10, left: [Node], right: [Node] } }

@@ -3,22 +3,25 @@
 // Input:
 // javascript
 // Copy code
-// [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
-
-// obj = { 1: 1, 2: 2, 3: 3, 4: 4 };
+// arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
 
 const convertToObj = (arr) => {
   let obj = {};
+
   for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
-    if (obj[num]) {
-      obj[num] += 1;
-    } else {
+    if (!obj[num]) {
       obj[num] = 1;
+    } else {
+      obj[num] += 1;
     }
   }
-  return obj;
+
+  return obj; // obj = { 1: 1, 2:2 , 3: 3, 4: 4 };
 };
+
+const arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4];
+console.log(convertToObj(arr)); // { 1: 1, 2: 2, 3: 3, 4: 4 }
 
 // Example 2: Character Frequency
 // Write a function that takes a string of lowercase characters and returns an object where the keys are the characters and the values are the number of times each character appears.
@@ -38,6 +41,7 @@ const convertToObj = (arr) => {
 
 const charFrequency = (str) => {
   let obj = {};
+
   for (let i = 0; i < str.length; i++) {
     let char = str[i];
     if (obj[char]) {
@@ -46,6 +50,7 @@ const charFrequency = (str) => {
       obj[char] = 1;
     }
   }
+
   return obj;
 };
 
@@ -89,6 +94,7 @@ const wordLength = (arr) => {
 // }
 const sumEvenOdd = (arr) => {
   let obj = { even: 0, odd: 0 };
+
   for (let i = 0; i < arr.length; i++) {
     let num = arr[i];
     if (num % 2 === 0) {
@@ -97,5 +103,6 @@ const sumEvenOdd = (arr) => {
       obj.odd += num;
     }
   }
+
   return obj;
 };

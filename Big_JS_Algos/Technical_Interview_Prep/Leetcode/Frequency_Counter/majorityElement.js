@@ -1,23 +1,3 @@
-// Example 1:
-
-// Input: nums = [3,2,3]
-// Output: 3
-
-// Example 2:
-// Input: nums = [2,2,1,1,1,2,2]
-// Output: 2
-
-// Example 3:
-// Input: nums = [1]
-// Output: 1
-
-// Constraints:
-
-// n == nums.length
-// 1 <= n <= 5 * 104
-// -109 <= nums[i] <= 109
-//Readable approach:
-
 const majorityElement1 = (nums) => {
   if (nums.length === 1) return nums[0];
 

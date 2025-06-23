@@ -1,4 +1,4 @@
-# Write a function that takes two numbers and returns their counts:
+# Write a function that takes two numbers and returns their sums:
 
 # Part 1: Understand the question
 
@@ -123,16 +123,19 @@ function charCount(str) {
 
 ```javascript
 function charCount(str) {
-   let code = str.charCodeAt();
-   if(!(code > 47 && code < 58) && //(0-9)
-   !(code > 64 && code < 91)    && //(upper letters)
-   !(code > 96 && code < 123)) {   //(lower letters)
+  let code = str.charCodeAt();
+  if (
+    !(code > 47 && code < 58) && //(0-9)
+    !(code > 64 && code < 91) && //(upper letters)
+    !(code > 96 && code < 123)
+  ) {
+    //(lower letters)
     return false;
-   }
-   return true;
+  }
+  return true;
 }
 ```
 
-* what about when to use lowercasing? before, during or after?
-    - depends on inputs
-    - do it after the conditions are met, then lower case it, add it, initialize it or add 1
+- what about when to use lowercasing? before, during or after?
+  - depends on inputs
+  - do it after the conditions are met, then lower case it, add it, initialize it or add 1

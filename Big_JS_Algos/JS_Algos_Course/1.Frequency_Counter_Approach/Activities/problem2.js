@@ -34,7 +34,7 @@ function areThereDuplicates() {
 
 //Multiple Pointer Approach
 function areThereDuplicates1() {
-  let sortedArr = Array.from(arguments).sort();
+  const sortedArr = Array.from(arguments).sort();
   let j = 1;
 
   for (let arg in sortedArr) {
@@ -47,10 +47,7 @@ function areThereDuplicates1() {
   return true;
 }
 
-
 //-----------------------------------------------------------------//
-
-
 
 // Bonus:
 // Time - O(n log n)
