@@ -5,7 +5,8 @@
 // We can use the two pointers technique here to check that all corresponding characters are equal.
 // To start, we check the first and last characters using two separate pointers. To check the next pair of characters, we just need to move our pointers toward each other one position.
 // We continue until the pointers meet each other or we find a mismatch.
-
+const s = "racecar";
+const d = "abcdcba"; // another example
 /**
  * @param {string} s
  * @return {boolean}
@@ -25,7 +26,11 @@ const checkIfPalindrome = (s) => {
 
   return true;
 };
-
+const output = checkIfPalindrome(s);
+console.log(output); // Output: true
+const output1 = checkIfPalindrome(d);
+console.log(output1); // Output: true
+// Output: true
 // Notice that if the input was an array of characters instead of a string, the algorithm wouldn't change.
 // The two pointers technique works as long as the index variables are moving along some abstract iterable.
 

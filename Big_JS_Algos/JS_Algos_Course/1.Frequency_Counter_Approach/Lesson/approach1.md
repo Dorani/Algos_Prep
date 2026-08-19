@@ -107,7 +107,7 @@ function charCount(str) {
 function charCount(str) {
   const obj = {};
   for (let char of str) {
-    char = char.toLowerCase();
+    let char = char.toLowerCase();
     if (/[a-z0-9])/.test(char)) {
       //if its truthy, add one to that objs property, otherwise 1
       obj[char] = ++obj[char] || 1;

@@ -8,28 +8,25 @@
 // Input: s = "", t = "y"
 // Output: "y"
 
+const findTheDifference = (s, t) => {
+  const lookup = {};
+  let totalString = s + t;
 
+  for (let i = 0; i < totalString.length; i++) {
+    let char = totalString[i];
+    lookup[char] ? (lookup[char] += 1) : (lookup[char] = 1);
+  }
 
-const findTheDifference = (s,t) => {
-    if(t.length !== s.length + 1) return "";
-    const lookup = {};
-    let totalString = s+t;
-
-    for(let i = 0; i < totalString.length; i++) {
-        let char = totalString[i];
-        lookup[char] ? lookup[char] += 1 : lookup[char] = 1;
+  for (const [key, value] of Object.entries(lookup)) {
+    if (value % 2 !== 0) {
+      return key;
     }
+  }
 
-    for(const [key,value] of Object.entries(lookup)) {
-        if(value % 2 !== 0) {
-            return key;
-        }
-    }
+  return "";
+};
 
-    return "";
+let s = "abcd",
+  t = "abcde";
 
-}
-
-let s = "abcd", t = "abcde";
-
-console.log(findTheDifference(s,t));
+console.log(findTheDifference(s, t));

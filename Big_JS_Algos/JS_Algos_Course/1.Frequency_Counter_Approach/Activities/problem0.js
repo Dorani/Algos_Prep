@@ -4,9 +4,14 @@
 // javascript
 // Copy code
 // arr = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
-
+// obj = {
+// 1: 1,
+// 2: 2 ,
+// 3: 3,
+// 4: 4
+// };
 const convertToObj = (arr) => {
-  let obj = {};
+  const obj = {};
 
   for (let i = 0; i < arr.length; i++) {
     let num = arr[i];

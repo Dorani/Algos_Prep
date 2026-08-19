@@ -23,10 +23,11 @@ function minSubArrayLen(nums, sum) {
   let minLen = Infinity;
 
   while (start < nums.length) {
-    //if current window doesn't add up to the given sum
+    //If the current window’s sum is less than the target and we haven’t reached the end of the array
     if (total < sum && end < nums.length) {
-      //move the window to the right
+      //Add nums[end] to total (expand the window to the right)
       total += nums[end];
+      //Move end one step forward
       end++;
     } else if (total >= sum) {
       minLen = Math.min(minLen, end - start);

@@ -16,7 +16,7 @@
 //otherwise false
 
 const containsDuplicate = (nums) => {
-  if (!nums.length) return false;
+  if (nums.length === 0 || nums.length === 1) return false;
 
   const lookup = {};
 
@@ -38,18 +38,19 @@ console.log(containsDuplicate(nums));
 const containsDuplicate1 = (nums) => {
   if (!nums.length) return false;
 
-  const lookup = {};
+  const dup_obj = {};
 
   for (let i = 0; i < nums.length; i++) {
-    if (lookup[nums[i]]) {
-      lookup[nums[i]] += 1;
+    let num = nums[i];
+    if (dup_obj[num]) {
+      dup_obj[num] += 1;
     } else {
-      lookup[nums[i]] = 1;
+      dup_obj[num] = 1;
     }
   }
 
-  for (let key in lookup) {
-    if (lookup[key] > 1) return true;
+  for (let key in dup_obj) {
+    if (dup_obj[key] > 1) return true;
   }
 
   return false;

@@ -20,6 +20,6 @@ function countUniqueValues(arr) {
 
 //O(n) time, one loop
 
-const arrayTest = [1, 1, 2, 3, 3, 4, 5, 6, 6, 7];
+const arrayTest = [1, 2, 3, 3, 4, 5, 6, 6, 7];
 
 console.log(countUniqueValues(arrayTest));

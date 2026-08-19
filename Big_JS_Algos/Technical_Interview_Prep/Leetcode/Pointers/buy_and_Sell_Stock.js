@@ -22,7 +22,30 @@
 // 1 <= prices.length <= 105
 // 0 <= prices[i] <= 104
 
+//prices = [10]
 //-------------------Breakdown:------------------------//
+
+function maxProfits(prices) {
+  //edge case:
+  if (prices.length === 1) {
+    return 0;
+  }
+  let maxProfit = 0;
+  let buyLow = 0;
+  let sellHigh = 1;
+
+  while (sellHigh < prices.length) {
+    let profit = prices[sellHigh] - prices[buyLow];
+    if (profit > maxProfit) {
+      maxProfit = profit;
+    }
+    if (profit < 0) {
+      buyLow = sellHigh;
+    }
+    sellHigh += 1;
+  }
+  return maxProfit;
+}
 
 //set two pointers left and right, near each other ie 0,1
 //set your window max that will increase as the pointers move

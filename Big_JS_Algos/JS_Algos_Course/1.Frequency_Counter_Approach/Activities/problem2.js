@@ -31,7 +31,7 @@ function areThereDuplicates() {
 }
 
 //-----------------------------------------------------------------//
-
+// areThereDuplicates(1, 2, 3) // false
 //Multiple Pointer Approach
 function areThereDuplicates1() {
   const sortedArr = Array.from(arguments).sort();
